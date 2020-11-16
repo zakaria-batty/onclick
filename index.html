@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>onclick</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: coral;
+                text-align: center;
+                margin-top: 70px;
+            }
+
+            input {
+                font-size: 18px;
+                padding: 10px 10px 10px 5px;
+                display: block;
+                width: 300px;
+                border: none;
+                border-bottom: 1px solid #757575;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            .container {
+                font-family: 'Roboto';
+                width: 600px;
+                margin: 30px auto 0;
+                display: block;
+                background: #FFF;
+                padding: 10px 50px 50px;
+            }
+
+            .content {
+                display: flex;
+            }
+
+            #div {
+                padding-top: 10px;
+            }
+
+            #button {
+                padding: 0px 36px;
+                background: #ef8c67;
+                border: 1px;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h3>Enter the number of bottles:</h3>
+            <div class="content">
+                <input id="input" type="number" required placeholder="Enter the number of bottles:">
+                <button id="button">display</button>
+            </div>
+            <div id="div"></div>
+        </div>
+
+        <script>
+            var myInput = document.getElementById("input"),
+                myDiv = document.getElementById("div"),
+                myButton = document.getElementById("button");
+
+            myButton.onclick = function () {
+                "use strict";
+                if (myInput.value == "") {
+                    myDiv.innerHTML = "Enter the number of beer bottle";
+                } else {
+                    myDiv.innerHTML = "bottle of beer on the wall." + myInput.value + " bottle";
+                }
+            };
+        </script>
+
+    </body>
+
+</html>

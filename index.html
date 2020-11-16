@@ -75,8 +75,14 @@
                 if (myInput.value == "") {
                     myDiv.innerHTML = "Enter the number of beer bottle";
                 } else {
-                    myDiv.innerHTML = "bottle of beer on the wall." + myInput.value + " bottle";
+                    var len = myInput.value;
+                    var text = "";
+                    for (let i = 1; i <= len; i++) {
+                        text += "the number bottle of beer on the wall." + i + " bottle" + "<br>";
+                        myDiv.innerHTML = text;
+                    }
                 }
+
             };
         </script>
 

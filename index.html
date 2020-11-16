@@ -62,7 +62,6 @@
                 <input id="input" type="number" required placeholder="Enter the number of bottles:">
                 <button id="button">display</button>
             </div>
-            <div id="div"></div>
         </div>
 
         <script>
@@ -77,10 +76,12 @@
                 } else {
                     var len = myInput.value;
                     var text = "";
-                    for (let i = 1; i <= len; i++) {
-                        text += "the number bottle of beer on the wall." + i + " bottle" + "<br>";
+                    for (let i = len; i >= 1; i--) {
+                        var cul = i - 1;
+                        text += i + " bottles of beer on the wall, " + i + " bottles of beer. Take one down and pass it around, " + cul + " bottles of beer on the wall." + "<br>";
                         myDiv.innerHTML = text;
                     }
+
                 }
 
             };
